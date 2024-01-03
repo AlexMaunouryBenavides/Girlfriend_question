@@ -85,6 +85,9 @@ function Question() {
 	const trashTalk = [
 		'Stop !',
 		'Nulard(e)',
+		"Tu m'auras pas",
+		'Essaye Toujours',
+		'Vas t-en !!',
 
 		' Noooob',
 		'Tros lent',
