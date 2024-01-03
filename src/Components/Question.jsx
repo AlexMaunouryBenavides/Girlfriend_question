@@ -6,8 +6,8 @@ import questionAnimation from '../imgs/Animation - 1704033109780.json';
 import { Link } from 'react-router-dom';
 
 const StyledQuestion = styled.div`
-	width: 100vw;
-	height: 100vh;
+	max-width: 100vw;
+	max-height: 100vh;
 	background-color: #f0f0f0;
 	display: flex;
 	justify-content: center;
@@ -77,6 +77,28 @@ function Question() {
 	const handleHover = (e) => {
 		e.target.style.left = `${Math.ceil(Math.random() * 90)}% `;
 		e.target.style.top = `${Math.ceil(Math.random() * 90)}% `;
+		const quote = getRandomQuote();
+		if (quote) {
+			e.target.textContent = quote;
+		}
+	};
+	const trashTalk = [
+		'Stop !',
+		'Nulard(e)',
+
+		' Noooob',
+		'Tros lent',
+		'Artrose...',
+		'Arrêteeeuux !',
+		'Police !!!',
+	];
+
+	const getRandomNum = (num) => {
+		return Math.floor(Math.random() * num);
+	};
+	const getRandomQuote = () => {
+		const index = getRandomNum(trashTalk.length);
+		return trashTalk[index];
 	};
 	return (
 		<StyledQuestion>
